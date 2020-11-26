@@ -20,6 +20,7 @@ jobs:
         name: Run NodeJS Project
         run: npm run start
   build_image_and_deploy_to_docker_hub:
+    needs: [build_project]
     runs-on: ubuntu-latest
     steps:
       - 
